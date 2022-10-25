@@ -17,6 +17,7 @@
             </a>
         </div>
     </nav>
+    <!-- Contenedor Usuarios -->
     <div class="m-0 row justify-content-center align-items-center" style="width: 100%; height: 90%">
         <!-- Usuario -->
         <div class="col-auto">
@@ -30,8 +31,11 @@
             </div>
         </div>
         
+        <!-- Botón de registro de usuario -->
+        <div class="m-0 row justify-content-center">
+            <button href="#" class="btn btn-danger" style="width: 10%; "><img src="img/image.png" alt="" width="20" height="20" class="d-inline-block align-text-top"> Registrarse</button>
+        </div>
     </div>
-    
 </body>
 </html>
 
