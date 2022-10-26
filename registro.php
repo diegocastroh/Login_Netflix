@@ -80,10 +80,12 @@
                 <div class="col-md-8">
                     <div class="container">
                         <div class="row g-3">
+                            <!-- Nombre de Usuario -->
                             <div class="col-md-4">
                                 <label for="inputNick" class="form-label">Usuario</label>
                                 <input type="text" class="form-control" id="inputNick" placeholder="Apodo">
                             </div>
+                            <!-- Cajas -->
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Caja</label>
                                 <select id="inputState" class="form-select">
@@ -91,6 +93,7 @@
                                     <option>...</option>
                                 </select>
                             </div>
+                            <!-- Roles -->
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Rol</label>
                                 <select id="inputState" class="form-select">
@@ -99,16 +102,20 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- DNI/Pasaporte -->
                         <div class="row g-4" style="margin-top: auto">
                             <div class="col-md-12">
                                 <label for="inputDNI" class="form-label">DNI/Pasaporte</label>
                                 <input type="text" class="form-control" id="inputDNI" placeholder="Documento de Identidad">
                             </div>
                         </div>
-                        <!-- Botón de registro -->
-                        <div class="row g-4" style="margin-top: auto; text-align: right;">
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary">Registrarse</button>    
+                        <!-- Botón de registro e Inicio de Sesion -->
+                        <div class="row g-0" style="margin-top: 25px; width: 100%">
+                            <div class="col-6">
+                                <button type="submit" class="btn btn-success">Iniciar Sesion</button>    
+                            </div>
+                            <div class="col-6" style="text-align:right;">
+                                <button type="submit" class="btn btn-primary" >Registrarse</button>    
                             </div>
                         </div>
                     </div>
