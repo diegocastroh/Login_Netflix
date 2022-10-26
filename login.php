@@ -12,28 +12,31 @@
     <nav class="navbar navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" style="color: white;" href="#">
-            <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            Bootstrap
+            <img src="img/Logo.png" alt="" width="30" height=auto class="d-inline-block align-text-top">
+            DesCode
             </a>
         </div>
     </nav>
     <!-- Contenedor Usuarios -->
     <div class="m-0 row justify-content-center align-items-center" style="width: 100%; height: 90%">
+
+        <h1 style="text-align: center; color:white">¿Quien eres?</h1>
         <!-- Usuario -->
         <div class="col-auto">
             <!-- Estructura de un Item/Producto -->
-            <div class="card" style="width: 15rem; min-width: 250px; background: rgba(30,30,30,10);">
-                <img src="img/gato.webp" class="card-img-top" alt="...">
+            <div class="card" style="width: 15rem; min-width: 250px; background: black;">
+                <img src="img/perfil_icons/image_4.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title" style="text-align: center; color:white">Card title</h5>
-                <button href="#" class="btn btn-success" style="width: 100%;"><img src="img/image.png" alt="" width="20" height="20" class="d-inline-block align-text-top"> Añadir</button>
+                    <h5 class="card-title" style="text-align: center; color:white">Card title</h5>
+                    <br>
+                    <button href="#" class="btn btn-secondary" style="width: 100%;"> Iniciar Sesion</button>
                 </div>
             </div>
         </div>
         
         <!-- Botón de registro de usuario -->
         <div class="m-0 row justify-content-center">
-            <button href="#" class="btn btn-danger" style="width: 10%; "><img src="img/image.png" alt="" width="20" height="20" class="d-inline-block align-text-top"> Registrarse</button>
+            <a href="#" class="link-light" style="width: 100%; text-align: center;">Registrarse</a>
         </div>
     </div>
 </body>
