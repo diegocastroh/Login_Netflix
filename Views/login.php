@@ -23,19 +23,21 @@
         <h1 style="text-align: center; color:white">¿Quien eres?</h1>
         <!-- Instancia del conector -->
         <?php
-            include_once("../Models/config.php");
+            include_once("../Models/consultas.php");
             $sql = "SELECT id, usuario, icono, rol FROM usuarios"; /* Consulta SQL */
-            $query = mysqli_query($conexion, $sql);
-            while($users = mysqli_fetch_array($query)){?>
+            $consult = new Consultas();
+            $users = $consult->consulta($sql);
+            while($item = $users->fetch_assoc()){?>
                 <!-- Usuario -->
                 <div class="col-auto">
                     <!-- Estructura de un Item/Producto -->
-                    <div class="card" style="width: 15rem; min-width: 250px; background: black;">
-                        <img src="../img/perfil_icons/<?php echo $users['icono']?>" class="card-img-top" alt="...">
+                    <div class="card" style="width: 15rem; min-width: 250px; background: black; cursor: pointer">
+                        <img src="../img/perfil_icons/<?php echo $item['icono']?>" class="card-img-top" alt="...">
+                        <input type="hidden" name="id" value = "<?=$item['id'];?>">
                         <div class="card-body" style="text-align: center; color:white">
-                            <h4 class="card-title" ><?php echo $users['usuario']?></h4>
+                            <h4 class="card-title" ><?php echo $item['usuario']?></h4>
                             <?php
-                            $rol = $users['rol'];
+                            $rol = $item['rol'];
                              if ($rol === "Administrador"){
                                 $color = "#fe0000";
                             }else{
