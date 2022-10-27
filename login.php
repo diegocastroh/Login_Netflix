@@ -26,9 +26,9 @@
             <!-- Estructura de un Item/Producto -->
             <div class="card" style="width: 15rem; min-width: 250px; background: black;">
                 <img src="img/perfil_icons/image_4.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="text-align: center; color:white">Card title</h5>
-                    <br>
+                <div class="card-body" style="text-align: center; color:white">
+                    <h4 class="card-title" >Card title</h4>
+                    <p class="card-text">Administrador</p>
                     <button href="#" class="btn btn-secondary" style="width: 100%;"> Iniciar Sesion</button>
                 </div>
             </div>
