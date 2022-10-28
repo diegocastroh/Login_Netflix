@@ -25,8 +25,9 @@
         <?php
             include_once("../Models/consultas.php");
             $sql = "SELECT id, usuario, icono, rol FROM usuarios"; /* Consulta SQL */
-            $consult = new Consultas();
-            $users = $consult->consulta($sql);
+            $consult = new Consultas(); /* Instancia de conexión */
+            $users = $consult->consulta($sql); /* Se realiza la consulta */
+            /* Se recorre el resultado de la Tabla */
             while($item = $users->fetch_assoc()){?>
                 <!-- Usuario -->
                 <div class="col-auto">

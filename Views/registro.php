@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/login_styles.css">
     <link rel="stylesheet" href="../css/registro_styles.css">
     
@@ -24,7 +24,7 @@
     </nav>
     <!-- Formulario -->
     <div class="m-0 row justify-content-center align-items-center " style="width: 100%; height: 90%">
-        <h1 style="text-align: center; color:white; margin: 0">Registrate</h1>
+        <h1 style="text-align: center; color:white; margin: 5px">Registrate</h1>
         <!-- Clase form en registro_styles -->
         <div class="form">
             <form class="row g-3" style="padding-top: 5px; padding-bottom: 5px;">
@@ -60,26 +60,20 @@
                 </div>
                 <!-- Distrito -->
                 <div class="col-md-4">
-                    <label for="inputDistrito" class="form-label">Distrito</label>
-                    <select id="inputDistrito" class="js-example-basic-single" name="distrito" style="width: 100%">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                    <label for="sel_distrito" class="form-label">Distrito</label>
+                    <select id="sel_distrito" class="js-example-basic-single" name="distrito" style="width: 100%">
                     </select>
                 </div>
                 <!-- Ciudad -->
                 <div class="col-md-4">
-                    <label for="inputProvincia" class="form-label">Provincia</label>
-                    <select id="inputProvincia" class="js-example-basic-single" name="provincia" style="width: 100%">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                    <label for="sel_provincia" class="form-label">Provincia</label>
+                    <select id="sel_provincia" class="js-example-basic-single" name="provincia" style="width: 100%;">
                     </select>
                 </div>
                 <!-- Departamento -->
                 <div class="col-md-4">
-                    <label for="inputDepartamento" class="form-label">Departamento</label>
-                    <select id="inputDepartamento" class="js-example-basic-single" name="departamento" style="width: 100%">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                    <label for="sel_departamento" class="form-label">Departamento</label>
+                    <select id="sel_departamento" class="js-example-basic-single" name="departamento" style="width: 100%; ">
                     </select>
                 </div>
                 <!-- Imagen de Perfil -->
@@ -144,8 +138,22 @@
     
 </body>
 </html>
-<script>
-    $(document).ready(function() {
-        $('.js-example-basic-single').select2();
-    });
-</script>
+    <script src="../Js/console_ubigeo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script>
+        // In your Javascript (external .js resource or <script> tag)
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2();
+                listar_departamento();
+            });
+
+            $("#sel_departamento").change(function(){
+                var iddepartamento = $("#sel_departamento").val();
+                listar_pronvincia(iddepartamento);
+            })
+
+            $("#sel_provincia").change(function(){
+                var idprovincia = $("#sel_provincia").val();
+                listar_distrito(idprovincia);
+            })
+    </script>
