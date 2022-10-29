@@ -1,9 +1,9 @@
 <?php
-    class Modelo_Ubigeo{
+    class Ubigeo{
         private $conexion;
 		/* Creamos el metodo constructor */
         function __construct(){
-            require_once 'config.php';
+            require_once 'Config/config.php';
 			/* Iniciamos la conexión */
             $this->conexion = new conexion();
             $this ->conexion->conectar();
@@ -33,7 +33,7 @@
 				$this->conexion->cerrar();
 			}
         }
-		/* Distrito: Crea un array y lo retorna con los datos obtenidos de la base de datos de la tabla ubdistrito según el id de la provincia */
+		/* Distrito: Crea un array y lo retorna con los datos obtenidos de la base de datos de la tabla ubdistrito según el id de */
         function listar_combo_distrito($idprovincia){
             $sql = "call SP_LISTAR_COMBO_DISTRITO('$idprovincia')";
 			$arreglo = array();

@@ -2,7 +2,7 @@
     class Consultas{
         private $conexion;
         function __construct(){
-            require_once 'config.php';
+            require_once 'Config/config.php';
             $this->conexion = new conexion();
             $this->conexion->conectar();
         }

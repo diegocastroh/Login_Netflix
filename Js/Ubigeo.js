@@ -1,6 +1,6 @@
 function listar_departamento(){
     $.ajax({
-        url:'../Controllers/controlador_listar_departamento.php',
+        url:'?v=traedepa&c=Ubigeo',
         type:'POST'
     }).done(function(resp){
         var data = JSON.parse(resp);
@@ -21,7 +21,7 @@ function listar_departamento(){
 }
 function listar_pronvincia(iddepartamento){
     $.ajax({
-        url:'../Controllers/controlador_listar_provincia.php',
+        url:'?v=traeprov&c=Ubigeo',
         type:'POST',
         data:{
             iddepartamento:iddepartamento
@@ -44,11 +44,9 @@ function listar_pronvincia(iddepartamento){
     })
 }
 
-
-
 function listar_distrito(idprovincia){
     $.ajax({
-        url:'../Controllers/controlador_listar_distrito.php',
+        url:'?v=traedist&c=Ubigeo',
         type:'POST',
         data:{
             idprovincia:idprovincia

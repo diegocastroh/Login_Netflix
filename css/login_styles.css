@@ -6,3 +6,123 @@ html, body{
     background-attachment: fixed;
     background-size: cover;
 }
+.form{
+    width: 50%;
+    min-width: 300px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+}
+label{
+    color:white;
+}
+dialog{
+    width:50%;
+    max-height: 65%;
+    height:auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+.container-select-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-select-image figure{
+    position:relative;
+    overflow:hidden;
+    cursor: hand;
+}
+.container-select-image figure img{
+    transition:all 500ms ease-out;
+}
+.container-select-image figure .capa{
+    color:white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    
+}
+.container-select-image figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.container-select-image figure .capa h1{
+    margin-top: 0;
+    font-weight: bold;
+    transition: all 500ms ease-out;
+    font-size: 68px;
+    color: white
+}
+.container-select-image figure .capa h6{
+    margin-top:3rem;
+    font-weight: 600;
+    transition: all 500ms ease-out;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+
+.icon:hover{
+    filter: saturate(50%);
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+dialog::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+dialog::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+dialog::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+dialog::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+dialog::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+}
+
+dialog::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+/* scrollbar body */
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

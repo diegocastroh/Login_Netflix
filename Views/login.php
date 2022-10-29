@@ -23,20 +23,16 @@
         <h1 style="text-align: center; color:white">¿Quien eres?</h1>
         <!-- Instancia del conector -->
         <?php
-            include_once("../Models/consultas.php");
-            $sql = "SELECT id, usuario, icono, rol FROM usuarios"; /* Consulta SQL */
-            $consult = new Consultas(); /* Instancia de conexión */
-            $users = $consult->consulta($sql); /* Se realiza la consulta */
-            /* Se recorre el resultado de la Tabla */
+
             while($item = $users->fetch_assoc()){?>
                 <!-- Usuario -->
                 <div class="col-auto">
                     <!-- Estructura de un Item/Producto -->
                     <div class="card" style="width: 15rem; min-width: 250px; background: black; cursor: pointer">
-                        <img src="../img/perfil_icons/<?php echo $item['icono']?>" class="card-img-top" alt="...">
-                        <input type="hidden" name="id" value = "<?=$item['id'];?>">
+                        <img src="img/perfil_icons/<?=$item['icono']?>" class="card-img-top" alt="...">
+                        <input type="hidden" name="id" value = "<?=$item['id']?>">
                         <div class="card-body" style="text-align: center; color:white">
-                            <h4 class="card-title" ><?php echo $item['usuario']?></h4>
+                            <h4 class="card-title" ><?=$item['usuario']?></h4>
                             <?php
                             $rol = $item['rol'];
                              if ($rol === "Administrador"){
@@ -46,7 +42,7 @@
                             }
                             ?>
                             <p class="card-text texto-borde" style="color: <?php echo $color?>;"><?php echo $rol?></p>
-                            <button href="#" class="btn btn-secondary" style="width: 100%">Iniciar Sesion</button>
+                            <button href="?v=acceso&c=Usuario" class="btn btn-secondary" style="width: 100%">Iniciar Sesion</button>
                         </div>
                     </div>
                 </div>
@@ -54,9 +50,13 @@
 
         <!-- Botón de registro de usuario -->
         <div class="m-0 row justify-content-center">
-            <a href="../Views/registro.php" class="link-light" style="width: 100%; text-align: center;">Registrarse</a>
+            <a href="?v=registro&c=Usuario" class="link-light" style="width: 100%; text-align: center;">Registrarse</a>
         </div>
+
+        <!-- dialog -->
+        <dialog id="dialog">
+                
+        </dialog>
     </div>
 </body>
 </html>
-
